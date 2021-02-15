@@ -9,7 +9,10 @@
     
     <h1>Yerrrrrrrrrrrrrrrrrr</h1>
     
-    <h2>Welcome <%= Helpers.current_user.</h2>
+    <% if Helpers.is_logged_in?(session) %>
+      <h2>Welcome <%= Helpers.current_user(session).username %></h2>
+      <br>
+      <h2>Your account balance is: <%= Helpers.current_user(session).balance %></h2>
     
     
     <a href="/logout">Log Out</a>
