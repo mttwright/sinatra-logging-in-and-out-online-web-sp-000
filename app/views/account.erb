@@ -14,8 +14,9 @@
       <br>
       <h2>Your account balance is: <%= Helpers.current_user(session).balance %></h2>
     
-    
-    <a href="/logout">Log Out</a>
+    <% else %>
+      <a href="/logout">Log Out</a>
+    <% end %>
     
 
   </body>
